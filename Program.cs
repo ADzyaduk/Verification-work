@@ -22,7 +22,8 @@ string[] SearchForElements(string[] array, int stringLenght)
 Console.Clear();
 Console.Write("Введите элементы массива через пробел: ");
 string input = (Console.ReadLine()!);
-int stringLenght = 3;
 string[] array = input.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+Console.WriteLine("Введите максимальную длинну элемента массива");
+int stringLenght = int.Parse(Console.ReadLine()!);
 Console.WriteLine($"Введенный массив: [{string.Join(", ", array)}]");
 Console.WriteLine($"Новый массив: [{string.Join(", ", SearchForElements(array, stringLenght))}]");
